@@ -30,6 +30,8 @@ public class CardTrick {
         int userValue = sc.nextInt();
         boolean result = false;
         
+        Card luckyCard = new Card();        
+        
         System.out.println("** Magic hand just pick card **");        
         for (int i=0; i<magicHand.length; i++)        
         {
