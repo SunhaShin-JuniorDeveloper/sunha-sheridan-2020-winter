@@ -79,6 +79,5 @@ public class Student
      */
     public void setProgram(String program) {
         this.program = program;
-    }
-   
+    }   
 }
