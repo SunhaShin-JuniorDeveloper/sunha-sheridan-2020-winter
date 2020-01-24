@@ -23,28 +23,30 @@ public class CardTrick {
         int valueIndex;      
         String magicSuit;
         
-        Scanner sc = new Scanner(System.in);
-        System.out.println("** Enter a suit");
-        String userSuit = sc.nextLine();
-        System.out.println("   Enter a value **");
-        int userValue = sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("** Enter a suit");
+//        String userSuit = sc.nextLine();
+//        System.out.println("   Enter a value **");
+//        int userValue = sc.nextInt();
         boolean result = false;
         
-        Card luckyCard = new Card();        
+        Card luckyCard = new Card();    
+        luckyCard.setSuit("Diamonds");
+        luckyCard.setValue(6);
         
         System.out.println("** Magic hand just pick card **");        
         for (int i=0; i<magicHand.length; i++)        
         {
             Card c = new Card();     
             suitIndex = (int)(Math.random()*4);
-            valueIndex = (int)(Math.random()*2);
+            valueIndex = (int)(Math.random()*13+1);
             magicSuit = SUITS[suitIndex];
             c.setSuit(magicSuit);
             c.setValue(valueIndex);
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             
-            if(userSuit.equals(magicSuit) && userValue == valueIndex){     
+            if(magicSuit.equals(luckyCard.getSuit()) && valueIndex == luckyCard.getValue()){     
                 result = true;
                 System.out.println("\nYou win");                
                 break;

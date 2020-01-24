@@ -26,8 +26,7 @@ public class Card {
     /**
      * @param suit the suit to set
      */
-    public void setSuit(String suit) {
-        System.out.print("[" + suit + " ");
+    public void setSuit(String suit) {;
         this.suit = suit;
         
     }
@@ -42,8 +41,7 @@ public class Card {
     /**
      * @param value the value to set
      */
-    public void setValue(int value) {
-        System.out.print(value + "] ");
+    public void setValue(int value) {;
         this.value = value;
     } 
     
